@@ -31,9 +31,6 @@
         activeCategory: "",
       };
     },
-    async created() {
-      await this.generateCards();
-    },
     watch: {
       category: {
         immediate: true,
@@ -72,15 +69,13 @@
           area,
         };
       },
-      async generateCards() {
-        const cards = [];
-        for (let i = 0; i < this.count; i++) {
+      async generateCards(count = this.count) {
+        for (let i = 0; i < count; i++) {
           const card = await this.randomChooseImage(this.category);
           if (card) {
-            cards.push(card);
+            this.cards.push(card);
           }
         }
-        this.cards = cards;
         this.activeCategory = this.category;
       },
       async updateCards() {
@@ -94,9 +89,25 @@
       goToAcceptPage(card) {
         window.location.href = "publish.html?id="+card.id;
       },
+      async handleScroll (){
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const offsetHeight = document.documentElement.offsetHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        if (scrollTop + clientHeight >= offsetHeight) {
+          await this.generateCards(6);
+        }
+      },
+  
     },
+    created() {
+      this.generateCards();
+      window.addEventListener("scroll", this.handleScroll);
+    },
+    beforeUnmount() {
+        window.removeEventListener("scroll", this.handleScroll);
+      },
   };
-  </script>
+</script>
   
   <style>
   .card-container {

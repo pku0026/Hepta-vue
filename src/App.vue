@@ -8,11 +8,12 @@
   <div class="intro-wrapper" id="intro-wrapper">
     <CompanyIntro />
   </div>
+  <div class="publish-wrapper" id="publish-wrapper">
+    <PrivatePublish />
+  </div>
   <div class="hottask-wrapper" id="hottask-wrapper">
     <HotTask />
   </div>
-  <div class="test">
-    </div>
 </template>
 
 <script>
@@ -20,13 +21,15 @@ import ImageSlider from './ImageSlider.vue'
 import FixedNav from './FixedNav.vue'
 import CompanyIntro from './CompanyIntro.vue'
 import HotTask from './HotTask.vue'
+import PrivatePublish from './PrivatePublish.vue'
 export default {
   name: 'App',
   components: {
     ImageSlider,
     FixedNav,
     CompanyIntro,
-    HotTask
+    HotTask,
+    PrivatePublish
   },
   data(){
     return {
