@@ -16,13 +16,31 @@ export default {
     return {
     slides: [
           {
-            img: require('@/assets/logo.png')
+            img: require('@/assets/logo.png'),
+            buttons : [
+              {
+                text: 'Button 1',
+                link: 'https://www.google.com'
+              },
+              {
+                text: 'Button 2',
+                link: 'https://www.google.com'
+              }
+            ]
           },
           {
-            img: require('@/assets/hepta.jpg')
+            img: require('@/assets/hepta.jpg'),
+            buttons : [
+              {
+                text: 'Button 3',
+                link: 'https://www.baidu.com'
+              }
+            ]
           },
           {
-            img: require('@/assets/meghna.png')
+            img: require('@/assets/meghna.png'),
+            buttons : [
+            ]
           }
         ]
     }
