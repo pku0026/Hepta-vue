@@ -5,8 +5,11 @@
   <div class="Nav-wrapper">
     <FixedNav />
   </div>
-  <div class="intro-wrapper">
+  <div class="intro-wrapper" id="intro-wrapper">
     <CompanyIntro />
+  </div>
+  <div class="hottask-wrapper" id="hottask-wrapper">
+    <HotTask />
   </div>
   <div class="test">
     </div>
@@ -16,12 +19,14 @@
 import ImageSlider from './ImageSlider.vue'
 import FixedNav from './FixedNav.vue'
 import CompanyIntro from './CompanyIntro.vue'
+import HotTask from './HotTask.vue'
 export default {
   name: 'App',
   components: {
     ImageSlider,
     FixedNav,
-    CompanyIntro
+    CompanyIntro,
+    HotTask
   },
   data(){
     return {
@@ -70,7 +75,9 @@ export default {
     padding: 5px;
     margin: 0 auto;
   }
-
+  .hottask-wrapper{
+    margin-top: 20px;
+  }
   .test {
     width: 100%;
     height: 200vh;

@@ -1,0 +1,152 @@
+{
+    "category1": [
+      {
+        "url": "https://picsum.photos/400/300?random=1",
+        "description": "这是一张随机图片",
+        "price": 50,
+        "author": "张三",
+        "area": "北京"
+      },
+      {
+        "url": "https://picsum.photos/400/300?random=2",
+        "description": "这是另一张随机图片",
+        "price": 60,
+        "author": "李四",
+        "area": "上海"
+      },
+      {
+        "url": "https://picsum.photos/400/300?random=3",
+        "description": "这是第三张随机图片",
+        "price": 70,
+        "author": "王五",
+        "area": "广州"
+      },
+      {
+        "url": "https://picsum.photos/400/300?random=4",
+        "description": "这是第四张随机图片",
+        "price": 80,
+        "author": "赵六",
+        "area": "深圳"
+      },
+      {
+        "url": "https://picsum.photos/400/300?random=5",
+        "description": "这是第五张随机图片",
+        "price": 90,
+        "author": "钱七",
+        "area": "成都"
+      }
+    ],
+    "category2": [
+      {
+        "url": "https://picsum.photos/400/300?random=6",
+        "description": "这是一张随机图片",
+        "price": 100,
+        "author": "张三",
+        "area": "北京"
+      },
+      {
+        "url": "https://picsum.photos/400/300?random=7",
+        "description": "这是另一张随机图片",
+        "price": 110,
+        "author": "李四",
+        "area": "上海"
+      },
+      {
+        "url": "https://picsum.photos/400/300?random=8",
+        "description": "这是第三张随机图片",
+        "price": 120,
+        "author": "王五",
+        "area": "广州"
+      },
+      {
+        "url": "https://picsum.photos/400/300?random=9",
+        "description": "这是第四张随机图片",
+        "price": 130,
+        "author": "赵六",
+        "area": "深圳"
+      },
+      {
+        "url": "https://picsum.photos/400/300?random=10",
+        "description": "这是第五张随机图片",
+        "price": 140,
+        "author": "钱七",
+        "area": "成都"
+      }
+    ],
+    "category3": [
+        {
+          "url": "https://picsum.photos/400/300?random=1",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "price": "100",
+          "author": "John",
+          "location": "New York"
+        },
+        {
+          "url": "https://picsum.photos/400/300?random=2",
+          "description": "Sed viverra dictum libero, a rhoncus mi fermentum non.",
+          "price": "200",
+          "author": "Mary",
+          "location": "Los Angeles"
+        },
+        {
+          "url": "https://picsum.photos/400/300?random=3",
+          "description": "Aliquam erat volutpat. Donec in bibendum magna.",
+          "price": "150",
+          "author": "Tom",
+          "location": "Chicago"
+        },
+        {
+          "url": "https://picsum.photos/400/300?random=4",
+          "description": "Ut auctor tortor a sem tincidunt ullamcorper.",
+          "price": "180",
+          "author": "Jane",
+          "location": "Houston"
+        },
+        {
+          "url": "https://picsum.photos/400/300?random=5",
+          "description": "Nam feugiat libero et augue faucibus, sit amet malesuada nisl convallis.",
+          "price": "120",
+          "author": "Bob",
+          "location": "Miami"
+        }
+    ],
+      "category4": [
+        {
+          "url": "https://picsum.photos/400/300?random=6",
+          "description": "Phasellus ac bibendum eros, at mollis nisi.",
+          "price": "150",
+          "author": "John",
+          "location": "San Francisco"
+        },
+        {
+          "url": "https://picsum.photos/400/300?random=7",
+          "description": "Duis commodo mauris mauris, vel tristique libero ultrices vitae.",
+          "price": "250",
+          "author": "Mary",
+          "location": "Seattle"
+        },
+        {
+          "url": "https://picsum.photos/400/300?random=8",
+          "description": "Praesent bibendum risus at turpis eleifend auctor.",
+          "price": "170",
+          "author": "Tom",
+          "location": "Boston"
+        },
+        {
+          "url": "https://picsum.photos/400/300?random=9",
+          "description": "Nam sit amet sapien vel nisl posuere pharetra.",
+          "price": "220",
+          "author": "Jane",
+          "location": "Washington D.C."
+        },
+        {
+          "url": "https://picsum.photos/400/300?random=10",
+          "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc tincidunt malesuada eros, at laoreet purus malesuada quis.",
+          "price": "190",
+          "author": "Bob",
+          "location": "Las Vegas"
+        }
+    ]
+}
+       
+  
