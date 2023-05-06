@@ -1,16 +1,27 @@
 <template>
-  <div class="slider-border">
+  <div class="slider-border" id="SliderHome">
     <ImageSlider :slides="slides" />
   </div>
+  <div class="Nav-wrapper">
+    <FixedNav />
+  </div>
+  <div class="intro-wrapper">
+    <CompanyIntro />
+  </div>
+  <div class="test">
+    </div>
 </template>
 
 <script>
 import ImageSlider from './ImageSlider.vue'
-
+import FixedNav from './FixedNav.vue'
+import CompanyIntro from './CompanyIntro.vue'
 export default {
   name: 'App',
   components: {
-    ImageSlider
+    ImageSlider,
+    FixedNav,
+    CompanyIntro
   },
   data(){
     return {
@@ -51,11 +62,17 @@ export default {
 <style>
   #app {
     background-color: #fff;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
   }
   
   .slider-border {
     border: 5px solid #000;
     padding: 5px;
     margin: 0 auto;
+  }
+
+  .test {
+    width: 100%;
+    height: 200vh;
   }
 </style>

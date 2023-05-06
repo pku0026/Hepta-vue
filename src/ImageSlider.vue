@@ -76,7 +76,7 @@ import ImageOverlay from './ImageOverlay.vue'
   .slider {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 100vh;
     overflow: hidden;
   }
   
