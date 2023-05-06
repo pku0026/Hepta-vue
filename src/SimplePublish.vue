@@ -86,7 +86,7 @@
   width: 3px; /* 竖线宽度 */
   height: 100%;
   background-color: #38c172; /* 竖线颜色 */
-  z-index: 3;
+
 }
   .image-container {
     width: 30%;
