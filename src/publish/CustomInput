@@ -1,0 +1,35 @@
+<template>
+  <div>
+    <EditButtons v-on:fontsize="handleFontSize" v-on:color="handleColor" v-on:italic="handleItalic" />
+    <ScrollableInput v-model="inputValue" />
+  </div>
+</template>
+
+<script>
+import EditButtons from '@/components/EditButtons.vue'
+import ScrollableInput from '@/components/ScrollableInput.vue'
+
+export default {
+  name: 'CustomInput',
+  components: {
+    EditButtons,
+    ScrollableInput
+  },
+  data() {
+    return {
+      inputValue: ''
+    }
+  },
+  methods: {
+    handleFontSize() {
+      // 处理字体大小
+    },
+    handleColor() {
+      // 处理字体颜色
+    },
+    handleItalic() {
+      // 处理斜体
+    }
+  }
+}
+</script>
