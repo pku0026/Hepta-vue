@@ -9,6 +9,12 @@
         </div>
       </div>
     </div>
+    <div class="text-box">
+    <div class="max-w-3xl text-center mx-auto">
+      <h2 class="heading-xlarge mb-6 text-center" style="color: rgb(255, 255, 255); font-family: Oswald, sans-serif; font-weight: 400;">AI Revolutionizes Businesses around the World</h2>
+      <p class="body-large" style="color: rgb(255, 255, 255); font-family: Quattrocento, serif; font-weight: 400;">HeptaAI is an Artificial Intelligence business specializing in creating innovative solutions for households. Combining the latest AI technology with an experienced team of economists and developers, HeptaAI provides intelligent, automated solutions to help households tackle their toughest challenges.</p>
+    </div>
+  </div>
     <a class="prev" @click="prevSlide">&#10094;</a>
     <a class="next" @click="nextSlide">&#10095;</a>
   </div>
@@ -121,6 +127,9 @@ import ImageOverlay from './ImageOverlay.vue'
     max-width: 100%;
     max-height: 100%;
     display: block;
+    -webkit-user-select: none;
+    margin: auto;
+    opacity: 0.5; /* 设置透明度为 0.5 */
   }
   
   .prev,
@@ -157,4 +166,16 @@ import ImageOverlay from './ImageOverlay.vue'
     height: auto;
     z-index: 2;
   }
+
+  .text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  /* 添加其他样式属性，例如宽度、背景颜色等 */
+}
 </style>

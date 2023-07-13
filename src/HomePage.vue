@@ -5,12 +5,18 @@
   <div class="Nav-wrapper">
     <FixedNav />
   </div>
+  <div class="contact-wrapper" id="contact-wrapper">
+    <ContactForm />
+  </div>
   <div class="intro-wrapper" id="intro-wrapper">
     <CompanyIntro />
   </div>
   <div class="publish-wrapper" id="publish-wrapper">
     <PrivatePublish />
   </div>
+  <div class="footer-wrapper" od="footer-wrapper">
+    <FooterDiv />
+    </div>
   <div class="hottask-wrapper" id="hottask-wrapper">
     <HotTask />
   </div>
@@ -22,6 +28,8 @@ import FixedNav from './FixedNav.vue'
 import CompanyIntro from './CompanyIntro.vue'
 import HotTask from './HotTask.vue'
 import PrivatePublish from './PrivatePublish.vue'
+import ContactForm from './ContactForm.vue'
+import FooterDiv from './FooterDiv.vue'
 export default {
   name: 'HomePage',
   components: {
@@ -29,16 +37,18 @@ export default {
     FixedNav,
     CompanyIntro,
     HotTask,
-    PrivatePublish
+    PrivatePublish,
+    ContactForm,
+    FooterDiv
   },
   data(){
     return {
     slides: [
           {
-            img: require('@/assets/logo.png'),
+            img: 'https://images.unsplash.com/photo-1589254065878-42c9da997008?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHwyNnx8QXJ0aWZpY2lhbCUyMEludGVsbGlnZW5jZXxlbnwwfHx8fDE2ODU5MzE0MDB8MA&ixlib=rb-4.0.3&q=80&w=1080',
             buttons : [
               {
-                text: 'Button 1',
+                text: 'Contact',
                 link: 'https://www.google.com'
               },
               {
@@ -74,12 +84,8 @@ export default {
   }
   
   .slider-border {
-    border: 5px solid #000;
-    padding: 5px;
+    padding: 0px;
     margin: 0 auto;
-  }
-  .hottask-wrapper{
-    margin-top: 20px;
   }
   .test {
     width: 100%;

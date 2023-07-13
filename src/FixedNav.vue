@@ -1,14 +1,14 @@
 <template>
     <nav :class="{ 'fixed-nav': isFixed }">
-      <img class="logo" src="./assets/hepta.jpg" alt="商标">
+      <img class="logo" src="./assets/hepta_ai2-1.png" alt="商标">
       <ul>
-        <li><a href="#SliderHome">首页</a></li>
-        <li><a href="#intro-wrapper">简介</a></li>
-        <li><a href="#publish-wrapper">发布</a></li>
-        <li><a href="#hottask-wrapper">热门</a></li>
-        <li><a href="#pay">支付</a></li>
-        <li><a href="#help">帮助</a></li>
-        <li><a href="#">登录</a></li>
+        <li><a href="#SliderHome">Home</a></li>
+        <li><a href="#intro-wrapper">About</a></li>
+        <li><a href="#publish-wrapper">Publish</a></li>
+        <li><a href="#hottask-wrapper">Hot</a></li>
+        <li><a href="#pay">Account</a></li>
+        <li><a href="#help">Help</a></li>
+        <li><a href="#">Login</a></li>
       </ul>
     </nav>
   </template>
@@ -41,14 +41,15 @@
   nav {
     position: relative;
     width: auto;
-    height: 50px;
+    height: 100px;
     background-color: black;
     color: white;
-    font-size: 16px;
+    font-size: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    margin: 0px;
     z-index: 2;
   }
   

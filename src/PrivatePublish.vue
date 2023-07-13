@@ -1,10 +1,10 @@
 <template>
     <div>
       <div class="txt-container">
-        <div class="publish">发布<span class="italic">Private</span></div>
+        <div class="publish">Simple Try?<span class="italic">Private</span></div>
         <div class="slogan">
-          <div class="slogan-title">一点小钱，可以让你更轻松</div>
-          <div class="function">委托，发单，约会样样精通</div>
+          <div class="slogan-title">Easily Get Start</div>
+          <div class="function">Dating?Shopping?...</div>
         </div>
       </div>
     </div>
@@ -31,8 +31,8 @@ export default {
     align-items: center;
     background-color: black;
     padding: 20px;
+    margin: 0px;
     color: white;
-    margin-top: 5px;
   }
   
   .publish {

@@ -49,7 +49,7 @@
     padding: 15px 25px;
     font-size: 18px;
     color: #fff;
-    background-color: rgba(240, 158, 107, 0.8);
+    background-color: rgb(125, 186, 208);
     border: none;
     border-radius: 5px;
     cursor: pointer;

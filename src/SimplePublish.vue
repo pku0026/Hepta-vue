@@ -9,22 +9,22 @@
         <p class="slogan">{{ Slogan }}</p>
       </div>
       <div class="form-container">
-        <h3 class="form-title">登录</h3>
+        <h3 class="form-title">Login</h3>
         <form class="login-form">
           <div class="form-group">
-            <label for="username">账号</label>
+            <label for="username">Account</label>
             <input type="text" id="username" name="username" placeholder="请输入账号" />
           </div>
           <div class="form-group">
-            <label for="password">密码</label>
+            <label for="password">Password</label>
             <input type="password" id="password" name="password" placeholder="请输入密码" />
           </div>
           <div class="form-group">
-            <label for="verify">验证码</label>
+            <label for="verify">Verification</label>
             <input type="text" id="verify" name="verify" placeholder="请输入验证码" />
             <img class="verify-img" :src="verifyImgSrc" :alt="verifyImgAlt" />
           </div>
-          <button class="submit-btn" type="submit">登录</button>
+          <button class="submit-btn" type="submit">Login</button>
         </form>
       </div>
     </div>
@@ -44,15 +44,15 @@
       },
       mainTitle: {
         type: String,
-        default: "总有人能完成你的需求",
+        default: "Always Ready for You",
       },
       subTitle: {
         type: String,
-        default: "你可以提出任何要求",
+        default: "Any Request",
       },
         Slogan: {
             type: String,
-            default: "只要你能想到，我们就能做到",
+            default: "What Esver You Want",
         },
       verifyImgSrc: {
         type: String,
@@ -71,7 +71,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: black;
+    background-color: #1b1b1b;
     color: white;
     padding: 50px;
     box-sizing: border-box;

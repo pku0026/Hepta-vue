@@ -1,23 +1,23 @@
 <template>
     <div class="company-profile">
-      <h2 class="section-title">公司简介</h2>
+      <h2 class="section-title">Our services</h2>
       <swiper :options="swiperOption" modules="modules" :pagination="{ clickable: true }">
         <swiper-slide>
             <div class="row">
             <div class="column">
                 <img src="./assets/hepta.jpg" alt="">
-                <h3>高活跃度+平均日活1000w+</h3>
-                <p>拥有超过1000万的日活跃用户，用户粘性极高，平均每日使用时长超过3小时。</p>
+                <h3>Empowering HeptaAI Intelligence</h3>
+                <p>HeptaAI's Empowering HeptaAI Intelligence service provides organizations with the most advanced Artificial Intelligence technology and resources. Our service provides powerful AI models, cutting-edge algorithms, and comprehensive data analysis to help organizations unlock the potential of their data. With our AI-powered solutions, organizations can not only maximize the value of their data but also gain a competitive edge in their respective industries.</p>
             </div>
             <div class="column">
                 <img src="./assets/hepta.jpg" alt="">
-                <h3>用户粘性高，使用时长3小时+</h3>
-                <p>用户粘性非常高，每日使用时长超过3小时，用户生活中不可或缺的一部分。</p>
+                <h3>HeptaAI: AI Solutions</h3>
+                <p>HeptaAI: AI Solutions provides cutting-edge Artificial Intelligence solutions to help organizations optimize their operations and deliver an enhanced customer experience. We leverage advanced AI technology to automate processes, increase efficiency, and reduce costs. Our services include AI-powered automation, data analysis, and machine learning. We also provide customized AI solutions tailored to your specific needs. Together, we can create a smarter, more efficient future.</p>
             </div>
             <div class="column">
                 <img src="./assets/hepta.jpg" alt="">
-                <h3>交易量大，每日交易额1亿+</h3>
-                <p>每日交易额突破1亿，交易量庞大，为用户提供了高效、便捷的交易服务。</p>
+                <h3>Unlock AI Potential with HeptaAI</h3>
+                <p>HeptaAI provides businesses with the tools and resources needed to unlock the potential of Artificial Intelligence. Our team of experts are dedicated to helping you understand and use AI to increase efficiency, reduce costs, and unlock new opportunities. We offer customized solutions to meet your custom needs and goals. With HeptaAI, you can achieve success faster and easier than ever before!</p>
             </div>
             </div>
 
@@ -56,6 +56,12 @@
         </swiper-slide>
         
       </swiper>
+    </div>
+    <div class="About-Us" style="background-color: #1b1b1b;color: rgb(255, 255, 255);">
+          <h3 style="font-size: 30px;">About Us</h3>
+          <p >I am the proud CEO of HeptaAI, a Artificial Intelligence business based in the United States. We specialize in creating AI-based products and services for businesses of all sizes. Our mission is to create technology that will revolutionize the way businesses operate.HeptaAI's services include AI-driven customer service, automated marketing, and predictive analytics. We have a team of experts who work hard to develop AI algorithms that can help businesses make better decisions. We also provide consulting services to help businesses understand how AI can help them achieve their goals. We are passionate about helping our customers succeed and our team is constantly innovating to create the best AI solutions for our clients.
+          </p>
+
     </div>
   </template>
   
@@ -98,7 +104,8 @@
   }
   
   .section-title {
-    font-size: 24px;
+    font-size: 40px;
+    font-family: Oswald, sans-serif;
   }
   
   .row {
@@ -129,6 +136,11 @@
   
   .column p {
     margin-top: 10px;
+  }
+
+  .About-Us{
+    padding: 20px;
+    text-align: center;
   }
   </style>
   
