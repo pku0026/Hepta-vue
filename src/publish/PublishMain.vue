@@ -130,6 +130,7 @@ export default {
         reader.onload = (e) => {
           // 将文件数据转换为Base64编码
           const base64Data = e.target.result;
+          console.log(base64Data);
           this.photos.push(base64Data);
         };
         reader.readAsDataURL(fileInput.files[0]);
