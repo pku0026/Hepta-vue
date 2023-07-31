@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import PublishPage from '../publish/PublishPage.vue'
+import PublishMain from '../publish/PublishMain.vue'
 import HomePage from '../HomePage.vue'
 const routes = [
     {
@@ -9,8 +9,8 @@ const routes = [
       },
   {
     path: '/publish',
-    name: 'PublishPage',
-    component: PublishPage
+    name: 'PublishMain',
+    component: PublishMain
   }
 ]
 

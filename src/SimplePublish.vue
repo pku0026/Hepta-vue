@@ -23,14 +23,16 @@
             <label for="verify">Verification</label>
             <input type="text" id="verify" name="verify" placeholder="请输入验证码" />
             <img class="verify-img" :src="verifyImgSrc" :alt="verifyImgAlt" />
+            <p class="error-msg" v-if="showErrorMsg">Please Try Again</p>
           </div>
-          <button class="submit-btn" type="submit">Login</button>
+          <button class="submit-btn" type="button" @click="handleLogin">Login</button>
         </form>
       </div>
     </div>
   </template>
   
   <script>
+import axios from 'axios';
   export default {
     name: "SimplePublish",
     props: {
@@ -63,6 +65,48 @@
         default: "验证码",
       },
     },
+    data() {
+      return {
+        verify_truth: "meghua",
+        showErrorMsg: false, // 默认不显示错误消息
+      };
+    },
+    methods: {
+      check_verify(usr_input){
+        if(usr_input == this.verify_truth){
+          return true;
+        }
+        else{
+          return false;
+        }
+      },
+      handleLogin() {
+  
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const Verification = document.getElementById('verify').value;
+
+        // 在这里你可以使用Axios或其他方式发送POST请求
+        // 例如：
+        const data = {
+          account: username,
+          password: password,
+        }
+
+        if (!this.check_verify(Verification)) {
+        this.showErrorMsg = true; // 验证码校验失败，显示错误消息
+        return; // 验证失败时终止登录处理
+        }
+        axios.post('http://127.0.0.1:5000/api/usr_login', data)
+          .then(response => {
+            console.log(response);
+            const success = response.data.success;
+            console.log(success);
+          })
+          .catch(error => {
+            console.log(error);});
+      }
+  }
   };
   </script>
   
@@ -179,5 +223,11 @@ transition: background-color 0.3s ease;
 
 .submit-btn:hover {
 background-color: #2d6a4f;
+}
+
+.error-msg {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
 }
 </style>
