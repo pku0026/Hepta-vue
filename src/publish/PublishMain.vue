@@ -1,6 +1,7 @@
 <template>
   <div class="post-container">
     <div class="post-header">
+      <img src="hepta_ai2-1.png" class="logo">
       <h1 style="color: aliceblue; font-size: 40px;">Publish</h1>
       <button @click="goToHomePage">Return</button>
     </div>
@@ -12,7 +13,7 @@
           <div class="user-age">年龄</div>
           <div class="user-location">地区</div>
           <div class="user-record">
-            <img src="asset/p1.png">
+            <img src="logo.png">
             <div class="record-details">
               <div class="record-time">2023-04-30</div>
               <div class="record-summary">这是我的第一条发表记录</div>
@@ -20,7 +21,7 @@
             </div>
           </div>
           <div class="user-record">
-            <img src="asset/p2.png">
+            <img src="logo.png">
             <div class="record-details">
               <div class="record-time">2023-04-29</div>
               <div class="record-summary">这是我的第二条发表记录</div>
@@ -28,7 +29,7 @@
             </div>
           </div>
           <div class="user-record">
-            <img src="asset/p1.png">
+            <img src="logo.png">
             <div class="record-details">
               <div class="record-time">2023-04-28</div>
               <div class="record-summary">这是我的第三条发表记录</div>
@@ -42,36 +43,39 @@
       <form>
         <table>
             <tr>
-                <td><label for="amount">标题</label></td>
+                <td><label for="amount">Title</label></td>
                 <td><input type="text" id="title" name="title" required></td>
               </tr>
           <tr>
-            <td><label for="amount">预期金额</label></td>
+            <td><label for="amount">Price</label></td>
             <td><input type="text" id="amount" name="amount" required></td>
           </tr>
           <tr>
-            <td><label for="time">时间</label></td>
-            <td><input type="text" id="time" name="time" required></td>
+            <td><label for="time">Time</label></td>
+            <td><input type="date" id="time" name="time" required><input type="time" id="time" name="time" required></td>
           </tr>
           <tr>
-            <td><label for="location">地点</label></td>
+            <td><label for="location">Place</label></td>
             <td><input type="text" id="location" name="location" required></td>
           </tr>
           <tr>
-            <td><label for="summary">需求简述</label></td>
-            <td><input type="text" id="summary" name="summary" maxlength="10" required></td>
+            <td><label for="summary">Description</label></td>
+            <td><FeiShu /></td>
           </tr>
           <tr>
-            <td><label for="contact">联系方式</label></td>
+            <td><label for="contact">Contact</label></td>
             <td><input type="text" id="contact" name="contact" required></td>
           </tr>
         </table>
-        <textarea id="content" name="content" rows="6" placeholder="输入文本"></textarea>
       </form>
       <div class="photo-picker">
-        <div class="thumbnail-container"></div>
+        <div class="thumbnail-container">
+          <div v-for="(base64Image, index) in photos" :key="index">
+            <img :src="base64Image" alt="Image" class="thumbnail"/>
+          </div>
+        </div>
         <label for = "file-input" class="pick-button">选择照片</label>
-        <input type="file" accept="image/*" id="file-input" style="display: none;" class="file-input">
+        <input type="file" accept="image/*" id="file-input" style="display: none;" class="file-input" @change="handleFileChange">
       </div>
       <div class="amount-estimate">
         <span>预估金额：</span>
@@ -80,7 +84,7 @@
       <button id="submit-button">发布</button>
     </div>
   </div>
-<FeiShu />
+
 </template>
 
 <script>
@@ -102,10 +106,11 @@ export default {
       content: '',
       estimate: 0,
       records: [
-        { image: 'asset/p1.png', time: '2023-04-30', summary: '这是我的第一条发表记录', amount: 100 },
-        { image: 'asset/p2.png', time: '2023-04-29', summary: '这是我的第二条发表记录', amount: 200 },
-        { image: 'asset/p1.png', time: '2023-04-28', summary: '这是我的第三条发表记录', amount: 300 }
-      ]
+        { image: 'logo.png', time: '2023-04-30', summary: '这是我的第一条发表记录', amount: 100 },
+        { image: 'logo.png', time: '2023-04-29', summary: '这是我的第二条发表记录', amount: 200 },
+        { image: 'logo.png', time: '2023-04-28', summary: '这是我的第三条发表记录', amount: 300 }
+      ],
+      photos: [],
     };
   },
   methods: {
@@ -117,7 +122,19 @@ export default {
       // Implement the logic to navigate to the home page here
       // For example, you can use Vue Router to navigate to the desired page
       this.$router.push('/');
-    }
+    },
+    handleFileChange(event) {
+      const fileInput = event.target;
+      if (fileInput.files && fileInput.files[0]) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          // 将文件数据转换为Base64编码
+          const base64Data = e.target.result;
+          this.photos.push(base64Data);
+        };
+        reader.readAsDataURL(fileInput.files[0]);
+      }
+    },
   },
   computed: {
     totalAmount() {
@@ -185,6 +202,8 @@ export default {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    border-right: #ccc solid 5px;
+    border-bottom: #ccc solid 5px;
   }
   
   /* 用户头像 */
@@ -209,6 +228,7 @@ export default {
   .user-name {
     font-size: 24px;
     font-weight: bold;
+    color:#eee;
   }
   
   /* 用户认证 */
@@ -247,8 +267,9 @@ export default {
   label {
     display: block;
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: bold;
+    color: white;
   }
   
   /* 表单输入框 */
@@ -270,19 +291,20 @@ export default {
   
   /* 预估金额 */
   .amount-estimate {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #eee;
     margin-top: 20px;
   }
   
   /* 发布按钮 */
   #submit-button {
-    background-color: #f86d7d;
-    color: #fff;
+    background-color: #eee;
+    color: #1b1b1b;
     border: none;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
@@ -319,7 +341,7 @@ export default {
   
   .record-summary {
     font-size: 16px;
-    color: #333;
+    color: #eee;
     margin-top: 5px;
   }
   
@@ -356,8 +378,8 @@ export default {
   }
   
   .thumbnail {
-    width: 80px;
-    height: 80px;
+    max-width: 200px;
+    max-height: 200px;
     margin: 10px;
     background-size: cover;
     background-position: center;
@@ -392,4 +414,7 @@ export default {
     object-fit: contain;
   }
   
+  .logo{
+    max-height: 90%;
+  }
 </style>
